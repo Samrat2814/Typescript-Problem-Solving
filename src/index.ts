@@ -5,10 +5,7 @@ function formatString(input: string, toUpper?: boolean): string {
   return input.toLowerCase();
 }
 
-// Example 
-console.log(formatString("Hello"));
-console.log(formatString("Hello", true));
-console.log(formatString("Hello", false));
+
 
 
 type Book = {
@@ -20,13 +17,7 @@ function filterByRating(items: Book[]): Book[] {
   return items.filter((item) => item.rating >= 4);
 }
 
-// Example 
-const books: Book[] = [
-  { title: "Book A", rating: 4.5 },
-  { title: "Book B", rating: 3.2 },
-  { title: "Book C", rating: 5.0 },
-];
-console.log(filterByRating(books));
+
 
 
 type ArrayOfStrings = string[];
@@ -40,9 +31,7 @@ function concatenateArraysNumber(...arrays: ArrayOfNumbers[]): ArrayOfNumbers {
   return arrays.reduce((acc, curr) => acc.concat(curr), []);
 }
 
-// Example 
-console.log(concatenateArraysString(["a", "b"], ["c"]));
-console.log(concatenateArraysNumber([1, 2], [3, 4], [5]));
+
 
 
 class Vehicle {
@@ -71,11 +60,8 @@ class Car extends Vehicle {
     return `Model: ${this.model}`;
   }
 }
-
-// Example 
 const myCar = new Car("Toyota", 2020, "Corolla");
-console.log(myCar.getInfo());
-console.log(myCar.getModel());
+
 
 
 function processValue(value: string | number): number {
@@ -86,9 +72,7 @@ function processValue(value: string | number): number {
   }
 }
 
-// Example 
-console.log(processValue("hello"));
-console.log(processValue(10));
+
 
 
 interface Product {
@@ -104,14 +88,7 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
   });
 }
 
-// Example
-const products = [
-  { name: "Pen", price: 10 },
-  { name: "Notebook", price: 25 },
-  { name: "Bag", price: 50 },
-];
 
-console.log(getMostExpensiveProduct(products));
 
 
 
@@ -133,9 +110,7 @@ function getDayType(day: Day): string {
   }
 }
 
-// Example 
-console.log(getDayType(Day.Monday));
-console.log(getDayType(Day.Sunday));
+
 
 
 async function squareAsync(n: number): Promise<number> {
@@ -150,6 +125,4 @@ async function squareAsync(n: number): Promise<number> {
   });
 }
 
-// Example 
-squareAsync(4).then(console.log);
-squareAsync(-3).catch(console.error);
+
