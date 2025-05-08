@@ -5,7 +5,7 @@ function formatString(input: string, toUpper?: boolean): string {
   return input.toLowerCase();
 }
 
-// Example usage:
+// Example 
 console.log(formatString("Hello"));
 console.log(formatString("Hello", true));
 console.log(formatString("Hello", false));
@@ -20,7 +20,7 @@ function filterByRating(items: Book[]): Book[] {
   return items.filter((item) => item.rating >= 4);
 }
 
-// Example usage
+// Example 
 const books: Book[] = [
   { title: "Book A", rating: 4.5 },
   { title: "Book B", rating: 3.2 },
@@ -40,10 +40,8 @@ function concatenateArraysNumber(...arrays: ArrayOfNumbers[]): ArrayOfNumbers {
   return arrays.reduce((acc, curr) => acc.concat(curr), []);
 }
 
-// Example Usage:
-
+// Example 
 console.log(concatenateArraysString(["a", "b"], ["c"]));
-
 console.log(concatenateArraysNumber([1, 2], [3, 4], [5]));
 
 
@@ -74,7 +72,7 @@ class Car extends Vehicle {
   }
 }
 
-// Example usage
+// Example 
 const myCar = new Car("Toyota", 2020, "Corolla");
 console.log(myCar.getInfo());
 console.log(myCar.getModel());
@@ -88,7 +86,7 @@ function processValue(value: string | number): number {
   }
 }
 
-// Example usage
+// Example 
 console.log(processValue("hello"));
 console.log(processValue(10));
 
@@ -135,7 +133,7 @@ function getDayType(day: Day): string {
   }
 }
 
-// Example usage
+// Example 
 console.log(getDayType(Day.Monday));
 console.log(getDayType(Day.Sunday));
 
@@ -152,6 +150,6 @@ async function squareAsync(n: number): Promise<number> {
   });
 }
 
-// Example usage
+// Example 
 squareAsync(4).then(console.log);
 squareAsync(-3).catch(console.error);
