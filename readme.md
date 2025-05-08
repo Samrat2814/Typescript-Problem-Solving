@@ -4,24 +4,9 @@ TypeScript is a statically typed language, and one of its main strengths lies in
 
 Interfaces are primarily used to define the shape of objects. They are more focused on the structure and can be extended or implemented. One of the key advantages of interfaces is their ability to support declaration merging. This means if you define an interface more than once, TypeScript will automatically merge them, which can be quite handy for extending objects across different parts of the application.
 
-Example:
-interface Car {
-    brand: string;
-    model: string;
-}
-interface Car {
-    year: number;
-}
-
 In this example, the Car interface is automatically merged, and the resulting interface will have brand, model, and year.
 
 On the other hand, types are more general and versatile. Types can represent more than just object structures. You can use them for primitive types, function signatures, union types, and more. Unlike interfaces, types cannot be merged, making them more rigid but also highly flexible for various use cases.
-
-Example:
-type Vehicle = {
-    brand: string;
-    model: string;
-};
 
 Key Differences:
 
@@ -36,26 +21,11 @@ The keyof keyword in TypeScript is used to extract the keys of a given type as a
 
 The keyof keyword takes a type and returns a union of all its keys. This can be incredibly useful when writing functions or methods that need to operate on the keys of an object but should remain type-safe.
 
-For example, consider an object type:
-type Person = {
-    name: string;
-    age: number;
-    address: string;
-};
-
 If we use keyof on the Person type, it will return a union of the string literals representing the keys of the Person type:
 
-type PersonKeys = keyof Person;  // 'name' | 'age' | 'address'
 
 Use Case:
 Let’s say you want to create a function that can access any property of a Person object. By using keyof, you ensure that the function only accepts valid keys, thus avoiding runtime errors caused by invalid property names.
-
-function getProperty(obj: Person, key: keyof Person) {
-    return obj[key];
-}
-
-const person: Person = { name: "John", age: 30, address: "123 Main St" };
-const personName = getProperty(person, "name");  // 'John'
 
 This ensures that key is always a valid key of the Person type, improving code safety and reducing errors during development.
 
